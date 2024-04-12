@@ -1,0 +1,68 @@
+<app-Header></app-Header>
+
+
+
+<form #customerForm="ngForm" (ngSubmit)="onSubmit(customerForm)" class="col-6 offset-3 border border-2 rounded rounded-3 p-2  black-border">
+
+  <div class="black-border">
+    <h3 class="text-info p-2 m-1 text-center">Add Customer Information</h3>
+
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10">
+        <div class="form-group">
+          <label for="CustomerId" class="control-label"><b>Customer Id</b></label>
+          <input type="text" name="CustomerId" id="CustomerId" [(ngModel)]="customer.CustomerId" class="form-control"  title="Please enter a valid CustomerId" required #FirstName="ngModel" />
+          <span class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="CustomerName" class="control-label"><b>Customer Name</b></label>
+          <input type="text" name="CustomerName" [(ngModel)]="customer.CustomerName" class="form-control"  pattern="[A-Za-z']{3,}" title="Please enter a valid Customer Name" required  #LastName="ngModel"/>
+          <span class="text-danger" *ngIf="customerForm.submitted && LastName.invalid">Enter Valid Customer Name</span>
+        </div>
+        <div class="form-group">
+          <label for="AnnualIncome" class="control-label"><b>Annual Income</b></label>
+          <input type="text" name="AnnualIncome" [(ngModel)]="customer.AnnualIncome" class="form-control" title="Please enter a valid AnnualIncome" required #AnnualIncome="ngModel" />
+          <span class="text-danger" *ngIf="customerForm.submitted && AnnualIncome.invalid">Enter Valid AnnualIncome</span>
+        </div>
+        <div class="form-group">
+          <label for="Dob" class="control-label"><b>Date Of Birth</b></label>
+          <input type="date" name="Dob" [(ngModel)]="customer.Dob" class="form-control" required />
+          <span class="text-danger" *ngIf="customerForm.submitted && !customer.Dob">Please provide a valid Date of Birth</span>
+        </div>
+        <div class="form-group">
+          <label for="Job" class="control-label"><b>Job</b></label>
+          <input type="text" name="Job" [(ngModel)]="customer.Job" class="form-control" required />
+          <span class="text-danger" *ngIf="customerForm.submitted && !customer.Job">Please provide a valid Job</span>
+        </div>
+        <div class="form-group">
+          <label for="ContactNumber" class="control-label"><b>Mobile Number</b></label>
+          <input type="text" name="ContactNumber" [(ngModel)]="customer.ContactNumber" class="form-control" pattern="[0-9]{10}" title="Please enter a valid Mobile number (10 digits)" required #ContactNumber="ngModel"  />
+          <span class="text-danger" *ngIf="customerForm.submitted && ContactNumber.invalid">Enter the valid Mobile Number</span>
+        </div>
+        <div class="form-group">
+          <label for="AadharNumber" class="control-label"><b>AadharCard Number</b></label>
+          <input type="text" name="AadharNumber" [(ngModel)]="customer.AadharNumber" class="form-control" pattern="[0-9]{12}" title="AADHAAR NUMBER CONTAINS (12 digits)" required #AadhaarNumber="ngModel"/>
+
+        </div>
+        <div class="form-group">
+          <label for="Street" class="control-label"><b>Street</b></label>
+          <input type="text" name="Street" [(ngModel)]="customer.Street" class="form-control" required />
+          <span class="text-danger" *ngIf="customerForm.submitted && !customer.Street">Please provide a valid Street</span>
+        </div>
+        <div class="form-group">
+          <label for="City" class="control-label"><b>City</b></label>
+          <input type="text" name="City" [(ngModel)]="customer.City" class="form-control" required />
+          <span class="text-danger" *ngIf="customerForm.submitted && !customer.City">Please provide a valid City</span>
+        </div>
+        <div class="form-group">
+          <input type="submit"  class="btn btn-full btn-warning " value="Create"/>
+        </div>
+      </div>
+    </div>
+    </div>
+
+</form>

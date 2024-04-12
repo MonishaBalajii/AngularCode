@@ -1,0 +1,27 @@
+  .success-container {
+      text-align: center;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .h11 {
+      color: #2ecc71; /* Green color */
+  }
+
+  .p1 {
+      margin-top: 10px;
+      color: #333;
+  }
+
+  button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: #fff;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+  }
+

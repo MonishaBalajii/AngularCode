@@ -1,0 +1,46 @@
+
+<app-Header></app-Header>
+<div class="text-align:center;">
+  <h3>Fetch Customer By Id</h3>
+
+  <form [formGroup]="filterForm" (ngSubmit)="OnSubmit()">
+    <input type="number" id="CustomerId" name="CustomerId" style="width: 40%;", placeholder="Enter Customer ID"  ngModel required />
+    <button type="submit" class="btn btn-sm btn-primary m-1">SEARCH</button>
+  </form>
+
+  <br />
+
+  <div *ngIf="customer?.CustomerName" >
+    <table class="table table-responsive">
+      <thead>
+        <tr>
+          <th>Customer ID</th>
+          <th>Customer Name</th>
+          <th>Annual Income</th>
+          <th>Dob</th>
+          <th>Job</th>
+          <th>Contact Number</th>
+          <th>Aadhar Number</th>
+          <th>Street</th>
+          <th>City</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ customer.CustomerId }}</td>
+          <td>{{ customer.CustomerName }}</td>
+          <td>{{ customer.AnnualIncome }}</td>
+          <td>{{ customer.Dob | date: 'yyyy-MM-dd' }}</td>
+          <td>{{ customer.Job }}</td>
+          <td>{{ customer.ContactNumber }}</td>
+          <td>{{ customer.AadharNumber }}</td>
+          <td>{{ customer.Street }}</td>
+          <td>{{ customer.City }}</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

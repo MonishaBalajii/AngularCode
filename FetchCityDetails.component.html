@@ -1,0 +1,35 @@
+<app-Header></app-Header>
+<hr />
+<div style="text-align:center;">
+    <h3>Customer Details</h3>
+</div>
+<hr />
+<table class="table table-responsive">
+    <thead>
+        <tr class="text-center">
+            <th>CustomerId</th>
+            <th>CustomerName</th>
+            <th>AnnualIncome</th>
+            <th>Dob</th>
+            <th>Job</th>
+            <th>ContactNumber</th>
+            <th>AadharNumber</th>
+            <th>Street</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let customer of customers">
+            <td>{{ customer.customerId }}</td>
+            <td>{{ customer.customerName }}</td>
+            <td>{{ customer.annualIncome }}</td>
+            <td>{{ customer.dob | date:'yyyy-MM-dd' }}</td>
+            <td>{{ customer.job }}</td>
+            <td>{{ customer.contactNumber }}</td>
+            <td>{{ customer.aadharNumber }}</td>
+            <td>{{ customer.street }}</td>
+            <td>{{ customer.city }}</td>
+        </tr>
+    </tbody>
+</table>
+

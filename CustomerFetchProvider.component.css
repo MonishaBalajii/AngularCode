@@ -1,0 +1,29 @@
+table,
+th,
+td,
+tr {
+border: 20px solid transparent;
+border-radius: 5px;
+text-align: center;
+padding: 10px;
+margin-left: 20%;
+}
+td,
+th {
+border: 2px solid black;
+background-color:#FCA1C7;
+border-collapse: separate;
+padding: 10px;
+
+}
+
+hr {
+  border-top: 3px solid;
+  border-color: black;
+}
+
+td {
+  border: 1px solid black;
+  padding: 10px;
+}
+

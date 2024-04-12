@@ -1,0 +1,63 @@
+
+
+<header class="container-fluid text-center" style="background-color: #A1EEFC; padding: 20px;">
+  <h1>CreditCard Application</h1>
+</header>
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm primary-bg-subtle-dark border-bottom box-shadow mb-3">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">
+      <img src="4.png" alt="Logo" class="navbar-logo">
+    </a>
+    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/Create">Create</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/FetchById">GetCustomerById</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/FetchAllCustomer">GetAllCustomers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/FetchCreditCardDetails">CreditCard Details</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/CustomerFetchProvider">CustomerJoinProvider</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/FetchProviderDetails">Provider Details</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/FetchCityDetails">City Details</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="container" style="height: 150vh;">
+  <main role="main">
+   <router-outlet></router-outlet>
+  </main>
+</div>
+
+<footer class="container-fluid text-center">
+  <div>&copy; CreditCard Application 2024</div>
+ </footer>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+<app-Header></app-Header>
+<hr />
+<div style="text-align:center;">
+    <h3>Customer and Provider Details</h3>
+</div>
+<hr />
+
+<table class="table table-responsive">
+
+    <thead>
+        <tr>
+            <th>CustomerId</th>
+            <th>CustomerName</th>
+            <th>AnnualIncome</th>
+            <th>Job</th>
+            <th>ContactNumber</th>
+            <th>AadharNumber</th>
+            <th>City</th>
+            <th>ProviderName</th>
+            <th>ProviderContactNumber</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+
+        <div *ngFor="let customer of customers">
+
+                    <td>{{ customer.CustomerId }}</td>
+                    <td>{{ customer.CustomerName }}</td>
+                    <td>{{ customer.AnnualIncome }}</td>
+                    <td>{{ customer.Job }}</td>
+                    <td>{{ customer.ContactNumber }}</td>
+                    <td>{{ customer.AadharNumber }}</td>
+                    <td>{{ customer.City }}</td>
+        <div>
+                    <td>
+            <div *ngFor="let provider of customers?.Providers?.$values">
+<div *ngIf="provider.CustomerId==customer.CustomerId">
+                {{ provider.ProviderName }}
+</div>
+            </div>
+        </td>
+
+
+
+
+
+
+
+
+    </tbody>
+
+</table>

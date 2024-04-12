@@ -1,0 +1,43 @@
+<app-Header></app-Header>
+<hr />
+<div style="text-align:center;">
+  <h3>Customer With Provider</h3>
+</div>
+<hr />
+
+<div  style="text-align:center;">
+  <form  [formGroup]="filterForm" (ngSubmit)="onsubmit()">
+    <input type="text"  style="width: 30%" placeholder="Enter the CustomerName" required formControlName="start" ngModel/>
+    <input type="text" style="width: 30%;" placeholder="Enter the ProviderName" required  formControlName="end" ngModel/>
+
+    <button type="submit" class="btn btn-sm btn-primary m-1">SEARCH</button>
+  </form>
+  <br />
+  <br />
+</div>
+<div *ngIf="successMsg !==null">
+  <table class="table table-responsive">
+    <thead>
+      <tr>
+        <th>Customer Name/th>
+        <th>Customer Name</th>
+        <th>Annual Income</th>
+        <th>Job</th>
+        <th>City</th>
+        <th>Provider Name</th>
+        <th>Provider Contact Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of customers">
+        <td>{{ item.CustomerId }}</td>
+        <td>{{ item.CustomerName}}</td>
+        <td>{{ item.AnnualIncome }} years</td>
+        <td>{{ item.Job }}</td>
+        <td>{{ item.City }}</td>
+        <td>{{ item.ProviderName }}</td>
+        <td>{{ item.ProviderContactNumber}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
